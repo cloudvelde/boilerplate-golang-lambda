@@ -1,0 +1,11 @@
+.idea/
+
+# compiled lambda stuff
+*.zip
+main
+boilerplate-golang-lambda
+
+# terraform stuff
+.terraform.*
+terraform.*
+.terraform
