@@ -34,8 +34,6 @@ EOF
 
 # You MUST have this if custom environment variables are used
 resource "aws_iam_policy" "lambda_kmsRead" {
-  count = local.create_iam_policy
-
   name = "${var.lambda_name}-kmsRead"
 
   policy = jsonencode({
@@ -54,8 +52,6 @@ resource "aws_iam_policy" "lambda_kmsRead" {
 
 # Minimum cloud watch settings needed for lambda debugging
 resource "aws_iam_policy" "lambda_cloudwatch" {
-  count = local.create_iam_policy
-
   name = "${var.lambda_name}-cloudwatch"
 
   policy = jsonencode({
