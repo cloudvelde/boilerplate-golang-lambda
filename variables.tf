@@ -37,4 +37,5 @@ variable "concurrent_lambdas" {
 variable "lambda_environment_vars" {
   type        = map(string)
   description = "Environment varialbes for lambda runtime"
+  default = {}
 }

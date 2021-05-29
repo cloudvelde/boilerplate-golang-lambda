@@ -83,5 +83,7 @@ resource "aws_lambda_function" "boilerplate" {
   filename         = var.filename
   source_code_hash = filebase64sha256(var.filename)
 
-  environment = var.lambda_environment_vars
+  environment = {
+    variables = var.lambda_environment_vars
+  }
 }
