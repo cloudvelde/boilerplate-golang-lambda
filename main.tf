@@ -36,7 +36,7 @@ EOF
 resource "aws_iam_policy" "lambda_kmsRead" {
   count = local.create_iam_policy
 
-  name = "${local.prefix}-alb-GoLambda-kmsRead"
+  name = "${var.lambda_name}-kmsRead"
 
   policy = jsonencode({
     Version = "2012-10-17"
@@ -56,7 +56,7 @@ resource "aws_iam_policy" "lambda_kmsRead" {
 resource "aws_iam_policy" "lambda_cloudwatch" {
   count = local.create_iam_policy
 
-  name = "${local.prefix}-alb-GoLambda-cloudwatch"
+  name = "${var.lambda_name}-cloudwatch"
 
   policy = jsonencode({
     Version = "2012-10-17"
