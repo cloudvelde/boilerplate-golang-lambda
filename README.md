@@ -30,6 +30,7 @@ terraform destroy
 ```
 
 # Generated Module Variables
+
 ## Module Data
 | Data Name |
 | :--- | 
@@ -38,9 +39,9 @@ terraform destroy
 ## Module Resources
 | Resource Name |
 | :--- | 
-| aws_iam_role |
-| aws_lambda_function |
 | aws_iam_policy |
+| aws_lambda_function |
+| aws_iam_role |
 
 ## Module Variables
 | Variable Name | Variable Description | Type | Default |
@@ -51,5 +52,5 @@ terraform destroy
 | aws_region | Name of AWS Region to be deployed | ${string} | eu-central-1 |
 | lambda_memory | Lambda memory allocation in MB | ${number} | 256 |
 | concurrent_lambdas | Number of concurrent lambdas, AWS default is 1000 | ${number} | 1 |
-| lambda_environment_vars | Environment varialbes for lambda runtime | ${map(string)} | None |
+| lambda_environment_vars | Environment varialbes for lambda runtime | ${map(string)} | {} |
 
