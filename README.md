@@ -28,3 +28,28 @@ terraform apply
 ```bash
 terraform destroy
 ```
+
+# Generated Module Variables
+## Module Data
+| Data Name |
+| :--- | 
+| archive_file |
+
+## Module Resources
+| Resource Name |
+| :--- | 
+| aws_iam_role |
+| aws_lambda_function |
+| aws_iam_policy |
+
+## Module Variables
+| Variable Name | Variable Description | Type | Default |
+| :--- | :--- | :---: | ---: |
+| lambda_name | Name of the deployed lambda function | ${string} | boilerplate |
+| filename | Name of zip to be uploaded | ${string} | lambda.zip |
+| lambda_handler | Name of go binary in zip file | ${string} | main |
+| aws_region | Name of AWS Region to be deployed | ${string} | eu-central-1 |
+| lambda_memory | Lambda memory allocation in MB | ${number} | 256 |
+| concurrent_lambdas | Number of concurrent lambdas, AWS default is 1000 | ${number} | 1 |
+| lambda_environment_vars | Environment varialbes for lambda runtime | ${map(string)} | None |
+
