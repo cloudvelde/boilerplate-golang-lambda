@@ -24,7 +24,7 @@ variable "aws_region" {
 
 variable "lambda_memory" {
   type        = number
-  description = "Lambda memory allocation"
+  description = "Lambda memory allocation in MB"
   default     = 256
 }
 
